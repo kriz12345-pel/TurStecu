@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Modern</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#07111f;
+    color:white;
+    overflow-x:hidden;
+}
+
+.bg-glow{
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:#0ea5e9;
+    filter:blur(220px);
+    opacity:.15;
+    top:-200px;
+    left:-200px;
+    z-index:-1;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    gap:50px;
+}
+
+.content{
+    max-width:600px;
+    animation:slideLeft 1s ease;
+}
+
+.tag{
+    display:inline-block;
+    background:#0ea5e920;
+    color:#38bdf8;
+    padding:10px 18px;
+    border-radius:30px;
+    margin-bottom:20px;
+}
+
+.content h1{
+    font-size:65px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.content h1 span{
+    color:#38bdf8;
+}
+
+.content p{
+    color:#b5b5b5;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.btn{
+    background:#0ea5e9;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.btn2{
+    border:1px solid #38bdf8;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:12px;
+}
+
+.stats{
+    display:flex;
+    gap:40px;
+}
+
+.stats h2{
+    color:#38bdf8;
+}
+
+.image{
+    position:relative;
+    animation:slideRight 1s ease;
+}
+
+.image img{
+    width:350px;
+    height:450px;
+    object-fit:cover;
+    border-radius:25px;
+    border:2px solid #38bdf8;
+    box-shadow:0 0 40px rgba(14,165,233,.3);
+}
+
+.card{
+    position:absolute;
+    left:-30px;
+    bottom:20px;
+    background:#111827;
+    padding:15px 25px;
+    border-radius:15px;
+    border:1px solid #38bdf8;
+    animation:float 3s infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes slideRight{
+    from{
+        opacity:0;
+        transform:translateX(80px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:40px;
+}
+
+.content h1{
+    font-size:42px;
+}
+
+.image img{
+    width:280px;
+    height:360px;
+}
+
+.stats{
+    justify-content:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-glow"></div>
+
+<nav>
+    <div class="logo">TurStecu</div>
+
+    <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Tentang</a></li>
+        <li><a href="#">Skill</a></li>
+        <li><a href="#">Proyek</a></li>
+        <li><a href="#">Kontak</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <div class="content">
+
+        <span class="tag">👋 Selamat Datang</span>
+
+        <h1>
+            Solusi Kreatif<br>
+            <span>Dunia Digital</span>
+        </h1>
+
+        <p>
+            Saya seorang manusia yang fokus membuat
+            website modern, responsif, cepat, dan menarik
+            untuk bisnis maupun personal branding.
+        </p>
+
+        <div class="buttons">
+            <a href="#" class="btn">Portfolio</a>
+            <a href="#" class="btn2">Tentang Saya</a>
+        </div>
+
+        <div class="stats">
+            <div>
+                <h2>5+</h2>
+                <small>Pengalaman</small>
+            </div>
+
+            <div>
+                <h2>50+</h2>
+                <small>Project</small>
+            </div>
+
+            <div>
+                <h2>20+</h2>
+                <small>Klien</small>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="image">
+
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800" alt="Profile">
+
+        <div class="card">
+            TUR CEO
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+// Efek muncul saat scroll
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.style.opacity="1";
+            entry.target.style.transform="translateY(0)";
+        }
+    });
+});
+
+document.querySelectorAll('.content,.image').forEach(el=>{
+    observer.observe(el);
+});
+
+// Efek mengikuti mouse
+document.addEventListener("mousemove",(e)=>{
+    document.querySelector(".bg-glow").style.left =
+    (e.clientX-300)+"px";
+
+    document.querySelector(".bg-glow").style.top =
+    (e.clientY-300)+"px";
+});
+
+</script>
+
+</body>
+</html>
